@@ -1,13 +1,63 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    background-color: #fae8ff;
+    height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Container {
+    background-color: #fff;
+    width: 40rem;
+    margin: 5rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Container h1 {
+    align-self: center;
+}
+
+.Card {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
+
+.personalDetails {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+img {
+    max-width: 100%;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    object-fit: cover;
+}
+
+button {
+    color: #fff;
+    background-color: #d946ef;
+    border: 1px solid #d946ef;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    width: 90%;
+    align-self: center;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
 }
