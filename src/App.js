@@ -1,6 +1,8 @@
+import { useState } from "react";
 import CardComponent from "./components/CardComponent";
 
 function App() {
+    const [isBirthdays, setIsBirthdays] = useState(true);
     const people = [
         {
             name: "Bertie Yates",
@@ -28,16 +30,24 @@ function App() {
             img: "https://www.course-api.com/images/people/person-5.jpeg",
         },
     ];
+
+    const clearAll = () => {
+        setIsBirthdays(false);
+    };
+
     return (
         <div id="App">
             {/* Container component*/}
             <div className="Container">
-                <h1>5 Birthdays Today</h1>
+                {isBirthdays ? (
+                    <h1>5 Birthdays Today</h1>
+                ) : (
+                    <h1>0 Birthdays Today</h1>
+                )}
                 {/* Card component */}
-                {people.map((person) => (
-                    <CardComponent person={person} />
-                ))}
-                <button>Clear all</button>
+                {isBirthdays &&
+                    people.map((person) => <CardComponent person={person} />)}
+                <button onClick={() => clearAll()}>Clear all</button>
             </div>
         </div>
     );
